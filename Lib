@@ -1192,3 +1192,5 @@ _G.BackgroundTheme = Color3.fromRGB(70, 70, 70)
 _G.SizeTheme = UDim2.new(0, 397, 0, 35)
 _G.SizeTitle = UDim2.new(0, 397, 0, 35)
 _G.SecFont = Enum.Font.SciFi
+
+local Win = SkyLib:Window("hub", "< MAIN GUI >")
