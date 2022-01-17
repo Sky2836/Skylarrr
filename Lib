@@ -1,7 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{     
 Title = "SKYHUB",     
 Text = "Wellcome To Sky Hub",
-Text = "Mobile Script",
 Button1 = "Ok.",
 Duration = 20
 })
