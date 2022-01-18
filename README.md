@@ -310,3 +310,8 @@ local CurrentFarmingPets = {}
 			end
         end
     end
+
+if _G.MyConnection then _G.MyConnection:Disconnect() end
+_G.MyConnection = game.Workspace.__THINGS.Orbs.ChildAdded:Connect(function(Orb)
+    game.Workspace.__THINGS.__REMOTES["claim orbs"]:FireServer({{Orb.Name}})
+end)
