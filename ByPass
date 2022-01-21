@@ -1,5 +1,5 @@
 if game.PlaceId == 6284583030 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Sky2836/Sanz/main/SkyHub_PetSim.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Sky2836/Skylarrr/main/PetSimX.Txt"))()
 elseif game.PlaceId == 3956818381 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sky2836/Sanz/main/Protected.luaninha.txt"))()
 end
