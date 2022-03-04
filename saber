@@ -1,0 +1,248 @@
+spawn(function()
+		while wait(.1) do
+			if _G.AutoSaber then
+				local off = game:GetService("Workspace").Map.Jungle.Final:FindFirstChild("Part")
+				local MyLevel = game.Players.localPlayer.Data.Level.Value
+				if MyLevel >= 200 and _G.AutoFarm == true then
+					repeat wait(.1)
+						_G.AutoFarm = false
+						function accept1()
+							local string_1 = "ProQuestProgress";
+							local string2 = "SickMan";
+							local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+							Target:InvokeServer(string_1, string_2);
+						end
+
+						function accept2()
+							local string_1 = "ProQuestProgress";
+							local string2 = "RichSon";
+							local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+							Target:InvokeServer(string_1, string2);
+						end
+						function saber()
+							if game:GetService("Workspace").Enemies:FindFirstChild("Mob Leader [Lv. 120] [Boss]") then
+								for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+									if v.Name == "Mob Leader [Lv. 120] [Boss]" and v.Humanoid.Health > 0 and v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
+										repeat wait()
+											pcall(function()
+												if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+													local args = {
+														[1] = "Buso"
+													}
+													game:GetService("ReplicatedStorage").Remotes.CommF:InvokeServer(unpack(args))
+												end
+												EquipWeapon(_G.SelectWeapon)
+												v.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
+												v.HumanoidRootPart.CanCollide = false
+												totarget(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))
+												game:GetService'VirtualUser':CaptureController()
+												game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+											end)
+										until v.Humanoid.Health == 0
+									end
+								end
+							end
+
+							function accept3()
+								local string_1 = "ProQuestProgress";
+								local string2 = "RichSon";
+								local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+								Target:InvokeServer(string_1, string_2);
+							end
+
+							wait(.1)
+							repeat totarget(CFrame.new(-1421.87024, 55.4666862, 21.7750397)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1421.87024, 55.4666862, 21.7750397)).Magnitude <= 10
+							wait(1)
+							repeat totarget(CFrame.new(-1647.19556, 29.1544189, 438.299408)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1647.19556, 29.1544189, 438.299408)).Magnitude <= 10
+							wait(1)
+							repeat totarget(CFrame.new(-1324.10144, 31.4560413, -461.404114)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1324.10144, 31.4560413, -461.404114)).Magnitude <= 10
+							wait(1)
+							repeat totarget(CFrame.new(-1152.38464, 9.74718285, -700.309875)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1152.38464, 9.74718285, -700.309875)).Magnitude <= 10
+							wait(1)
+							repeat totarget(CFrame.new(-1180.89563, 21.0007095, 187.861374)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1180.89563, 21.0007095, 187.861374)).Magnitude <= 10
+							wait(1)
+							repeat totarget(CFrame.new(-1610.00757, 11.5049858, 164.001587)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1610.00757, 11.5049858, 164.001587)).Magnitude <= 10
+							wait(2)
+							local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Torch")
+							wait(.4)
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+							wait(.1)
+							repeat totarget(CFrame.new(1114.55762, 4.9214654, 4349.2334)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1114.55762, 4.9214654, 4349.2334)).Magnitude <= 10
+							wait(5.5)
+							repeat totarget(CFrame.new(1114.26721, 4.16943789, 4366.15332)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1114.26721, 4.16943789, 4366.15332)).Magnitude <= 10
+							wait(1)
+							local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Cup")
+							wait(.4)
+							EquipWeapon("Cup")
+							wait(1)
+							repeat totarget(CFrame.new(1397.0614, 37.3480072, -1321.03955)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1397.0614, 37.3480072, -1321.03955)).Magnitude <= 10
+							wait(4.5)
+							repeat totarget(CFrame.new(1457.87976, 88.2521744, -1390.39575)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1457.87976, 88.2521744, -1390.39575)).Magnitude <= 10
+							wait(1.5)
+							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","SickMan")
+							wait(1)
+							repeat totarget(CFrame.new(-909.106689, 13.7520342, 4077.34888)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-909.106689, 13.7520342, 4077.34888)).Magnitude <= 10
+							wait(1.1)
+							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")
+							wait(1)
+							repeat totarget(CFrame.new(-2852.90234, 7.56227827, 5367.72412)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-2852.90234, 7.56227827, 5367.72412)).Magnitude <= 10
+							wait(1.5)
+							EquipWeapon(_G.SelectWeapon)
+							wait(1)
+							saber()
+							wait(2)
+							repeat totarget(CFrame.new(-909.106689, 13.7520342, 4077.34888)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-909.106689, 13.7520342, 4077.34888)).Magnitude <= 10
+							wait(1.1)
+							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")
+							wait(1.1)
+							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress")
+							wait(1)
+							local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Relic")
+							wait(.4)
+							EquipWeapon("Relic")
+							wait(1)
+							repeat totarget(CFrame.new(-1405.84094, 29.8519993, 5.05432224)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1405.84094, 29.8519993, 5.05432224)).Magnitude <= 10
+							
+							wait(1)
+							if off.CanCollide == false then
+								_G.AutoSaber = false
+								_G.AutoFarm = true
+							end
+						end
+					until _G.AutoSaber == false or off.CanCollide == false or _G.AutoFarm == true
+
+				elseif MyLevel >= 200 then
+					repeat wait(.1)
+						function accept1()
+							local string_1 = "ProQuestProgress";
+							local string2 = "SickMan";
+							local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+							Target:InvokeServer(string_1, string_2);
+						end
+
+						function accept2()
+							local string_1 = "ProQuestProgress";
+							local string2 = "RichSon";
+							local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+							Target:InvokeServer(string_1, string2);
+						end
+						function saber()
+							for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+								if v.Name == "Mob Leader [Lv. 120] [Boss]" then
+									repeat wait()
+										for i, v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+											if v.Name == "Mob Leader [Lv. 120] [Boss]" then
+												if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+													local args = {
+														[1] = "Buso"
+													}
+													game:GetService("ReplicatedStorage").Remotes.CommF:InvokeServer(unpack(args))
+												end
+												_G.FastBoss = true
+												EquipWeapon(_G.SelectWeapon)
+												v.HumanoidRootPart.CanCollide = false
+												v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+												totarget(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))
+												game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+												game:GetService'VirtualUser':CaptureController()
+												game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+												game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+											end
+										end
+									until v.Humanoid.Health == 0
+									_G.FastBoss = false
+								end
+							end
+						end
+
+						function accept3()
+							local string_1 = "ProQuestProgress";
+							local string2 = "RichSon";
+							local Target = game:GetService("ReplicatedStorage").Remotes["CommF"];
+							Target:InvokeServer(string_1, string_2);
+						end
+
+						wait(.1)
+						repeat totarget(CFrame.new(-1421.87024, 55.4666862, 21.7750397)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1421.87024, 55.4666862, 21.7750397)).Magnitude <= 10
+						wait(1)
+						repeat totarget(CFrame.new(-1647.19556, 29.1544189, 438.299408)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1647.19556, 29.1544189, 438.299408)).Magnitude <= 10
+						wait(1)
+						repeat totarget(CFrame.new(-1324.10144, 31.4560413, -461.404114)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1324.10144, 31.4560413, -461.404114)).Magnitude <= 10
+						wait(1)
+						repeat totarget(CFrame.new(-1152.38464, 9.74718285, -700.309875)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1152.38464, 9.74718285, -700.309875)).Magnitude <= 10
+						wait(1)
+						repeat totarget(CFrame.new(-1180.89563, 21.0007095, 187.861374)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1180.89563, 21.0007095, 187.861374)).Magnitude <= 10
+						wait(1)
+						repeat totarget(CFrame.new(-1610.00757, 11.5049858, 164.001587)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1610.00757, 11.5049858, 164.001587)).Magnitude <= 10
+						wait(2)
+						local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Torch")
+						wait(.4)
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+						wait(.1)
+						repeat totarget(CFrame.new(1114.55762, 4.9214654, 4349.2334)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1114.55762, 4.9214654, 4349.2334)).Magnitude <= 10
+						wait(5.5)
+						repeat totarget(CFrame.new(1114.26721, 4.16943789, 4366.15332)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1114.26721, 4.16943789, 4366.15332)).Magnitude <= 10
+						wait(1)
+						local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Cup")
+						wait(.4)
+						EquipWeapon("Cup")
+						wait(1)
+						repeat totarget(CFrame.new(1397.0614, 37.3480072, -1321.03955)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1397.0614, 37.3480072, -1321.03955)).Magnitude <= 10
+						wait(4.5)
+						repeat totarget(CFrame.new(1457.87976, 88.2521744, -1390.39575)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(1457.87976, 88.2521744, -1390.39575)).Magnitude <= 10
+						wait(1.5)
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","SickMan")
+						wait(1)
+						repeat totarget(CFrame.new(-909.106689, 13.7520342, 4077.34888)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-909.106689, 13.7520342, 4077.34888)).Magnitude <= 10
+						wait(1.1)
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")
+						wait(1)
+						repeat totarget(CFrame.new(-2852.90234, 7.56227827, 5367.72412)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-2852.90234, 7.56227827, 5367.72412)).Magnitude <= 10
+						wait(1.5)
+						EquipWeapon(_G.SelectWeapon)
+						wait(1)
+						saber()
+						wait(2)
+						repeat totarget(CFrame.new(-909.106689, 13.7520342, 4077.34888)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-909.106689, 13.7520342, 4077.34888)).Magnitude <= 10
+						wait(1.1)
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress","RichSon")
+						wait(1.1)
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("ProQuestProgress")
+						wait(1)
+						local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Relic")
+						wait(.4)
+						EquipWeapon("Relic")
+						wait(1)
+						repeat totarget(CFrame.new(-1405.84094, 29.8519993, 5.05432224)) wait() until _G.StopTween == true or not _G.AutoSaber or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position-Vector3.new(-1405.84094, 29.8519993, 5.05432224)).Magnitude <= 10
+						if off.CanCollide == false then
+							_G.AutoSaber = false
+						end
+					until _G.AutoOpenSaber == false or off.CanCollide == false
+					if game:GetService("Workspace").Enemies:FindFirstChild("Saber Expert [Lv. 200] [Boss]") then
+						for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+							if v.Name == "Saber Expert [Lv. 200] [Boss]" and v.Humanoid.Health > 0 and v:IsA("Model") and v:FindFirstChild("Humanoid") and v:FindFirstChild("HumanoidRootPart") then
+								repeat wait()
+									pcall(function()
+										if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
+											local args = {
+												[1] = "Buso"
+											}
+											game:GetService("ReplicatedStorage").Remotes.CommF:InvokeServer(unpack(args))
+										end
+										EquipWeapon(_G.SelectWeapon)
+										v.HumanoidRootPart.Size = Vector3.new(50, 50, 50)
+										v.HumanoidRootPart.CanCollide = false
+										totarget(v.HumanoidRootPart.CFrame * CFrame.new(1,20,1))
+										game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+										game:GetService'VirtualUser':CaptureController()
+										game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+										game:GetService("Players").LocalPlayer.Character.Humanoid:ChangeState(11)
+									end)
+								until _G.AutoSaber == true or v.Humanoid.Health <= 0
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
